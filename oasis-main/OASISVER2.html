@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oasis Floral - Seu Refúgio de Beleza</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -72,7 +72,7 @@
         }
 
         .logo {
-            font-family: 'Cormorant Garamond', serif;
+            font-family:  'Palatino Linotype', Palatino, serif;
             font-size: 2.2rem;
             font-weight: 700;
             color: var(--texto-elegante);
@@ -82,7 +82,7 @@
         }
 
         .logo::before {
-            content: '🌹';
+            content: '🌺';
             position: absolute;
             left: -35px;
             top: 50%;
@@ -446,7 +446,7 @@
         }
 
         .btn-principal {
-            background: linear-gradient(135deg, var(--rosa-po), #E91E63);
+            background: linear-gradient(135deg, var(--rosa-po), #ff679a);
             color: white;
             padding: 1.2rem 3rem;
             border: none;
@@ -541,6 +541,65 @@
             font-size: 4rem;
             z-index: 2;
         }
+
+        .orcamento-combos {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.orcamento-combos h2 {
+    font-size: 1.8rem;
+    color: var(--texto-elegante);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group select, 
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.checkboxes label {
+    display: block;
+    margin: 0.5rem 0;
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    background: var(--texto-elegante);
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #5a4a3a;
+}
 
         .post-categoria {
             position: absolute;
@@ -684,7 +743,6 @@
 
         .combo-card.destaque {
             border-color: var(--rosa-po);
-            transform: scale(1.05);
         }
 
         .combo-card.premium {
@@ -710,8 +768,9 @@
         }
 
         .combo-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 25px 60px rgba(255, 209, 220, 0.4);
+             transform: translateY(-10px) scale(1.05); /* Ambos aumentam igualmente */
+    box-shadow: 0 25px 60px rgba(255, 209, 220, 0.4);
+    z-index: 1; /* Garante que o card em hover fique acima dos outros */
         }
 
         .combo-icon {
@@ -992,102 +1051,188 @@
             background: #E91E63;
             transform: scale(1.05);
         }
+/* Footer Majestoso */
+/* Footer Majestoso */
+footer {
+    background: linear-gradient(135deg, var(--texto-elegante) 0%, #200823 100%);
+    color: white;
+    padding: 5rem 0 2rem;
+    position: relative;
+    font-family: 'Cormorant Garamond', serif;
+    border-top: 1px solid var(--rosa-princesa);
+}
 
-        /* Footer Majestoso */
-        footer {
-            background: linear-gradient(135deg, var(--texto-elegante) 0%, #1a1a1a 100%);
-            color: white;
-            padding: 4rem 0 2rem;
-            position: relative;
-        }
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
 
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--rosa-princesa), transparent);
-        }
+.footer-secao h4 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--rosa-princesa);
+    position: relative;
+    letter-spacing: 1px;
+}
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
+.footer-secao h4::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--rosa-princesa);
+}
 
-        .footer-secao h4 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--rosa-princesa);
-        }
+.footer-descricao, 
+.newsletter-texto {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+}
 
-        .footer-secao p,
-        .footer-secao li {
-            margin-bottom: 0.8rem;
-            color: #ccc;
-            line-height: 1.6;
-        }
+/* Listas de contato e serviços */
+.footer-secao ul {
+    list-style: none;
+    padding: 0;
+}
 
-        .footer-secao ul {
-            list-style: none;
-        }
+.footer-secao li {
+    margin-bottom: 1.2rem;
+    position: relative;
+    padding-left: 1.8rem;
+    font-size: 1.1rem;
+}
 
-        .footer-secao a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+.footer-secao li i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: var(--rosa-princesa);
+    font-size: 1.1rem;
+}
 
-        .footer-secao a:hover {
-            color: var(--rosa-princesa);
-        }
+.footer-secao a {
+    color: #d0d0d0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
-        .redes-sociais {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
+.footer-secao a:hover {
+    color: var(--rosa-princesa);
+    padding-left: 5px;
+}
 
-        .rede-social {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--rosa-princesa), #E91E63);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(248, 187, 217, 0.3);
-        }
+/* Redes Sociais */
+.redes-sociais {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
 
-        .rede-social:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(248, 187, 217, 0.5);
-            background: linear-gradient(135deg, #E91E63, var(--rosa-princesa));
-        }
+.rede-social {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, var(--rosa-princesa), #E91E63);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+}
 
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #333;
-            color: #999;
-        }
+.rede-social:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(233, 30, 99, 0.5);
+    background: linear-gradient(135deg, #E91E63, var(--rosa-princesa));
+}
 
-        .assinatura-elegante {
-            font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            font-size: 1.1rem;
-            color: var(--rosa-princesa);
-            margin-top: 1rem;
-        }
+/* Newsletter */
+.newsletter-form input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #444;
+    color: white;
+    border-radius: 4px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+}
 
+.btn-newsletter {
+    background: linear-gradient(135deg, var(--dourado-claro), #D4AF37);
+    color: var(--texto-elegante);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-family:  'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-newsletter:hover {
+    background: linear-gradient(135deg, #D4AF37, var(--dourado-claro));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #ff1ba466;
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+    text-align: center;
+    padding-top: 3rem;
+    border-top: 1px solid #ffd8fe;
+}
+
+.copyright {
+    color: #aaa;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.assinatura-elegante {
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--rosa-princesa);
+    margin: 1rem 0;
+}
+
+.slogan {
+    font-family: '', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--dourado-claro);
+    letter-spacing: 1px;
+}
+
+/* Responsivo */
+@media (max-width: 1200px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-secao {
+        margin-bottom: 3rem;
+    }
+}
         /* Preços Rápidos */
         .precos-rapidos {
             background: linear-gradient(135deg, var(--branco-nevoa) 0%, var(--rosa-po) 100%);
@@ -1165,10 +1310,19 @@
         }
 
         .categoria-tag.flor {
-            background: linear-gradient(135deg, var(--azul-celeste), #2196F3);
+            background: linear-gradient(135deg, #E6E6FA, #ff5ade); 
             color: white;
         }
 
+         .categoria-tag.cestas {
+    background: linear-gradient(135deg, #E6E6FA, #6ea8ff); 
+ color: white;
+        }
+
+        .categoria-tag.fertilizantes {
+    background: linear-gradient(135deg, #E8F5E9, #4CAF50); 
+     color: white;
+}
         .preco-valor {
             font-size: 1.3rem;
             font-weight: 700;
@@ -1510,7 +1664,7 @@
     </section>
 
     <!-- Combos Românticos -->
-    <section class="secao combos" id="combos">
+ <section class="secao combos" id="combos">
         <div class="container">
             <div class="titulo-secao">
                 <div class="subtitulo">Kits Especiais</div>
@@ -1519,45 +1673,31 @@
                 <p>Presentes únicos que despertam emoções e criam momentos inesquecíveis</p>
             </div>
             
-            <div class="combos-grid">
-                <div class="combo-card destaque">
-                    <div class="combo-badge">Mais Vendido</div>
-                    <span class="combo-icon">💕</span>
-                    <h3>Declaração de Amor</h3>
-                    <p>Buquê de Rosas Vermelhas + Urso de Pelúcia + Carta Perfumada</p>
-                    <div class="combo-preco">
-                        <span class="preco-antigo">R$ 110,00</span>
-                        <span class="preco-atual">R$ 90,00</span>
-                    </div>
-                    <button class="btn-combo">Escolher Este Kit</button>
+          <div class="combos-grid">
+            <!-- Card 1 - Catálogo de Combos -->
+            <div class="combo-card destaque">
+                <div class="combo-badge">Destaque</div>
+                <span class="combo-icon">💕</span>
+                <h3>Nossos Combos Prontos</h3>
+                <p>Selecione entre nossas opções cuidadosamente preparadas</p>
+                <div class="combo-preco">
+                    <span class="preco-atual">Para todas as ocasiões especiais</span>
                 </div>
-                
-                <div class="combo-card">
-                    <span class="combo-icon">👑</span>
-                    <h3>Dia da Princesa</h3>
-                    <p>Orquídea Branca + Vela Aromática + Difusor Floral Dream</p>
-                    <div class="combo-preco">
-                        <span class="preco-antigo">R$ 128,00</span>
-                        <span class="preco-atual">R$ 85,00</span>
-                    </div>
-                    <button class="btn-combo">Escolher Este Kit</button>
-                </div>
-                
-                <div class="combo-card premium">
-                    <div class="combo-badge premium">Relaxante</div>
-                    <span class="combo-icon">🌿</span>
-                    <h3>Autocuidado em Flor</h3>
-                    <p>Lavanda Seca + Vela Aromática + Chá de Camomila + Sais de Banho</p>
-                    <div class="combo-preco">
-                        <span class="preco-antigo">R$ 78,00</span>
-                        <span class="preco-atual">R$ 60,00</span>
-                    </div>
-                    <button class="btn-combo">Escolher Este Kit</button>
-                </div>
+                <button class="btn-combo">Ver Opções</button>
             </div>
-        </div>
-    </section>
-
+                <!-- Card de Combo Personalizado -->
+<div class="combo-card personalizado">
+    <div class="combo-badge personalizado">Exclusivo</div>
+    <span class="combo-icon">✨</span>
+    <h3>Combo Personalizado</h3>
+    <p>Crie seu próprio kit com itens especiais e valores sob medida</p>
+    <div class="combo-preco">
+        <span class="preco-atual">A partir de R$ 50,00</span>
+    </div>
+    <button class="btn-combo btn-orcamento">Solicitar Orçamento</button>
+</div>
+           
+</section>
     <!-- Seção Oásis -->
     <section class="secao oasis" id="oasis">
         <div class="container">
@@ -1565,7 +1705,7 @@
                 <div class="subtitulo">Experiências Únicas</div>
                 <h2>Seu Oásis Pessoal</h2>
                 <div class="decoracao"></div>
-                <p>Transformamos momentos em memórias eternas através da linguagem universal das flores</p>
+                <p>Transformamos momentos em memórias eternas através da linguagem universal das flores.</p>
             </div>
             
             <div class="oasis-grid">
@@ -1610,7 +1750,7 @@
                         <h3>O Significado das Flores no Shoujo</h3>
                         <p>Descubra como as flores carregam mensagens secretas nos animes shoujo e como aplicar essa linguagem romântica em seus arranjos.</p>
                         <div class="post-meta">
-                            <span class="post-data">15 Nov 2024</span>
+                            <span class="post-data">15 Fev 2025</span>
                             <span class="post-tempo">5 min de leitura</span>
                         </div>
                         <a href="#" class="btn-ler-mais">Ler Mais</a>
@@ -1626,7 +1766,7 @@
                         <h3>Como Preservar Seu Buquê por Mais Tempo</h3>
                         <p>Técnicas simples e eficazes para manter suas flores frescas e belas por muito mais tempo.</p>
                         <div class="post-meta">
-                            <span class="post-data">12 Nov 2024</span>
+                            <span class="post-data">10 Maio 2025</span>
                             <span class="post-tempo">3 min de leitura</span>
                         </div>
                         <a href="#" class="btn-ler-mais">Ler Mais</a>
@@ -1642,7 +1782,7 @@
                         <h3>Decoração Coquette com Flores</h3>
                         <p>Transforme sua casa em um verdadeiro conto de fadas com arranjos delicados e românticos.</p>
                         <div class="post-meta">
-                            <span class="post-data">10 Nov 2024</span>
+                            <span class="post-data">17 Jul 2025</span>
                             <span class="post-tempo">4 min de leitura</span>
                         </div>
                         <a href="#" class="btn-ler-mais">Ler Mais</a>
@@ -1655,10 +1795,10 @@
                         <div class="post-categoria">DIY</div>
                     </div>
                     <div class="post-conteudo">
-                        <h3>Arranjos para Iniciantes: Estilo Shoujo</h3>
-                        <p>Aprenda a criar seus próprios arranjos com o charme delicado e romântico dos animes shoujo.</p>
+                        <h3>Estilo Shoujo</h3>
+                        <p>Com o charme delicado e romântico dos animes shoujo, pode se entender e descobrir como fazer seus próprios estilos e arranjos com flores.</p>
                         <div class="post-meta">
-                            <span class="post-data">8 Nov 2024</span>
+                            <span class="post-data">8 Ago 2025</span>
                             <span class="post-tempo">6 min de leitura</span>
                         </div>
                         <a href="#" class="btn-ler-mais">Ler Mais</a>
@@ -1673,21 +1813,29 @@
         <div class="container">
             <div class="titulo-secao">
                 <div class="subtitulo">Nossa Essência</div>
-                <h2>A Magia por Trás do Oásis</h2>
+                <h2>A Magia por trás do Oásis</h2>
                 <div class="decoracao"></div>
             </div>
             
             <div class="sobre-content">
                 <div class="sobre-texto">
-                    <p>Em um mundo acelerado e muitas vezes hostil, a Oasis Floral nasceu como um refúgio de beleza e tranquilidade. Somos mais que uma floricultura - somos criadores de momentos mágicos.</p>
+                    <p>Em meio a um mundo acelerado e cinza, a Oásis Floral foi pensada como um refúgio doce e silencioso, um portal secreto que leva da correria para um jardim encantado.
+Aqui, cada trabalho, arranjo flor colhida, é com carinho, como se uma fadinha viesse. As pétalas carregam histórias, sussurram promessas e trazem aquela magia que só a natureza sabe criar.</p>
                     
-                    <p>Cada pétala é escolhida com carinho, cada arranjo é pensado como uma obra de arte. Acreditamos que as flores têm o poder de transformar ambientes e tocar corações, criando oásis de paz em meio ao cotidiano.</p>
+                    <p>
+Inspirada em princesas, tardes douradas e romances delicados como nas páginas de um shoujo, a Oásis Floral é além de uma floricultura, mas um é um lugar onde o tempo desacelera, os corações suspiram e o mundo parece mais bonito.</p>
                     
-                    <p>Nossa missão é proporcionar experiências que nutrem a alma, onde cada cliente encontra seu momento de serenidade e beleza, longe das pressões do mundo exterior.</p>
+                    <p> Acreditamos que as flores têm o poder de transformar ambientes e tocar corações, criando oásis de paz em meio ao cotidiano.
+Nossa missão é proporcionar experiências que nutrem a alma, onde cada cliente encontra seu momento de serenidade e beleza, longe das pressões do mundo exterior.</p>
                 </div>
                 
                 <div class="sobre-visual">
-                    <div class="icone-principal">🌺</div>
+            <div class="sobre-visual">
+                <img src="img/okis.gif"Oásis Floral - Jardim Encantado class="sobre-imagem">
+            </div>
+        </div>
+    </div>
+</section>
                 </div>
             </div>
         </div>
@@ -1700,7 +1848,7 @@
                 <div class="subtitulo">Compra Rápida</div>
                 <h2>Preços Diretos</h2>
                 <div class="decoracao"></div>
-                <p>Para quem busca produtos simples e encantadores sem personalização</p>
+                <p>Para quem busca produtos simples e encantadores sem personalização.</p>
             </div>
             
             <div class="tabela-precos-container">
@@ -1714,72 +1862,74 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><span class="produto-icon">🌻</span> Buquê de Girassóis</td>
-                            <td><span class="categoria-tag buque">Buquê</span></td>
-                            <td class="preco-valor">R$ 25,00</td>
-                            <td><button class="btn-detalhes" onclick="mostrarDetalhes('girassois')">+ Detalhes</button></td>
-                        </tr>
-                        <tr>
-                            <td><span class="produto-icon">🐰</span> Coelho de Pelúcia</td>
-                            <td><span class="categoria-tag pelucia">Pelúcia</span></td>
-                            <td class="preco-valor">R$ 35,00</td>
-                            <td><button class="btn-detalhes" onclick="mostrarDetalhes('coelho')">+ Detalhes</button></td>
-                        </tr>
-                        <tr>
-                            <td><span class="produto-icon">💖</span> Coração de Pelúcia</td>
-                            <td><span class="categoria-tag pelucia">Pelúcia</span></td>
-                            <td class="preco-valor">R$ 18,00</td>
-                            <td><button class="btn-detalhes" onclick="mostrarDetalhes('coracao')">+ Detalhes</button></td>
-                        </tr>
-                        <tr>
-                            <td><span class="produto-icon">🌸</span> Buquê De lírios</td>
-                            <td><span class="categoria-tag buque">Buquê</span></td>
-                            <td class="preco-valor">R$ 35,00</td>
-                            <td><button class="btn-detalhes" onclick="mostrarDetalhes('delirios')">+ Detalhes</button></td>
-                        </tr>
-                        <tr>
-                            <td><span class="produto-icon">🌹</span> Buquê de Rosas</td>
-                            <td><span class="categoria-tag buque">Buquê</span></td>
-                            <td class="preco-valor">R$ 20,00</td>
-                            <td><button class="btn-detalhes" onclick="mostrarDetalhes('rosas')">+ Detalhes</button></td>
-                        </tr>
-                        <tr>
-                            <td><span class="produto-icon">🌼</span> Crisântemo Rosa</td>
-                            <td><span class="categoria-tag flor">Flor</span></td>
-                            <td class="preco-valor">R$ 6,00</td>
-                            <td><button class="btn-detalhes" onclick="mostrarDetalhes('crisantemo')">+ Detalhes</button></td>
-                        </tr>
-                        <td><span class="produto-icon">🌱</span>Fertilizante Flores</td>
-                            <td><span class="categoria-tag buque">Cuidado</span></td>
-                            <td class="preco-valor">R$ 20,00</td>
-                            <td><button class="btn-detalhes" onclick="mostrarDetalhes('cestas')">+ Detalhes</button></td>
-                        </tr>
-                        <tr>
-                            <td><span class="produto-icon">🩷</span>Cesta coração 8 bombons</td>
-                            <td><span class="categoria-tag buque">Cestas</span></td>
-                            <td class="preco-valor">R$ 46,90</td>
-                            <td><button class="btn-detalhes" onclick="mostrarDetalhes('cestas')">+ Detalhes</button></td>
-                        </tr>
-                        <tr>
-                            <td><span class="produto-icon">🩵</span>Cesta romântica com vinho</td>
-                            <td><span class="categoria-tag buque">Cestas</span></td>
-                            <td class="preco-valor">R$ 105,80</td>
-                            <td><button class="btn-detalhes" onclick="mostrarDetalhes('cestas')">+ Detalhes</button></td>
-                        </tr>
-                        <tr>
-                            <td><span class="produto-icon">💜</span>Cesta do amor</td>
-                            <td><span class="categoria-tag buque">Cestas</span></td>
-                            <td class="preco-valor">R$ 75,00</td>
-                            <td><button class="btn-detalhes" onclick="mostrarDetalhes('cestas')">+ Detalhes</button></td>
-                        </tr>
-                        <tr>
-                            <td><span class="produto-icon">💚</span>Cesta de chocolate</td>
-                            <td><span class="categoria-tag buque">Cestas</span></td>
-                            <td class="preco-valor">R$ R$ 149,90</td>
-                            <td><button class="btn-detalhes" onclick="mostrarDetalhes('cestas')">+ Detalhes</button></td>
-                        </tr>
-                    </tbody>
+                       <tbody>
+    <tr>
+        <td><span class="produto-icon">🌻</span> Buquê de Girassóis</td>
+        <td><span class="categoria-tag buque">Buquê</span></td>
+        <td class="preco-valor">R$ 25,00</td>
+        <td><button class="btn-detalhes" onclick="mostrarDetalhes('girassois')">+ Detalhes</button></td>
+    </tr>
+    <tr>
+        <td><span class="produto-icon">🐰</span> Coelho de Pelúcia</td>
+        <td><span class="categoria-tag pelucia">Pelúcia</span></td>
+        <td class="preco-valor">R$ 35,00</td>
+        <td><button class="btn-detalhes" onclick="mostrarDetalhes('coelho')">+ Detalhes</button></td>
+    </tr>
+    <tr>
+        <td><span class="produto-icon">💖</span> Coração de Pelúcia</td>
+        <td><span class="categoria-tag pelucia">Pelúcia</span></td>
+        <td class="preco-valor">R$ 18,00</td>
+        <td><button class="btn-detalhes" onclick="mostrarDetalhes('coracao')">+ Detalhes</button></td>
+    </tr>
+    <tr>
+        <td><span class="produto-icon">🌸</span> Buquê De lírios</td>
+        <td><span class="categoria-tag buque">Buquê</span></td>
+        <td class="preco-valor">R$ 35,00</td>
+        <td><button class="btn-detalhes" onclick="mostrarDetalhes('delirios')">+ Detalhes</button></td>
+    </tr>
+    <tr>
+        <td><span class="produto-icon">🌹</span> Buquê de Rosas</td>
+        <td><span class="categoria-tag buque">Buquê</span></td>
+        <td class="preco-valor">R$ 20,00</td>
+        <td><button class="btn-detalhes" onclick="mostrarDetalhes('rosas')">+ Detalhes</button></td>
+    </tr>
+    <tr>
+        <td><span class="produto-icon">🌼</span> Crisântemo Rosa</td>
+        <td><span class="categoria-tag flor">Flor</span></td>
+        <td class="preco-valor">R$ 6,00</td>
+        <td><button class="btn-detalhes" onclick="mostrarDetalhes('crisantemo')">+ Detalhes</button></td>
+    </tr>
+    <tr>
+        <td><span class="produto-icon">💜</span> Cesta Coração</td>
+        <td><span class="categoria-tag cestas">Cesta</span></td>
+        <td class="preco-valor">R$ 46,90</td>
+        <td><button class="btn-detalhes" onclick="mostrarDetalhes('cesta_coracao')">+ Detalhes</button></td>
+    </tr>
+    <tr>
+        <td><span class="produto-icon">❤️</span> Cesta Romântica</td>
+        <td><span class="categoria-tag cestas">Cesta</span></td>
+        <td class="preco-valor">R$ 105,80</td>
+        <td><button class="btn-detalhes" onclick="mostrarDetalhes('cesta_romantica')">+ Detalhes</button></td>
+    </tr>
+    <tr>
+        <td><span class="produto-icon">💘</span> Cesta do Amor</td>
+        <td><span class="categoria-tag cestas">Cesta</span></td>
+        <td class="preco-valor">R$ 75,00</td>
+        <td><button class="btn-detalhes" onclick="mostrarDetalhes('cesta_amor')">+ Detalhes</button></td>
+    </tr>
+    <tr>
+        <td><span class="produto-icon">🤎</span> Cesta de Chocolate</td>
+        <td><span class="categoria-tag cestas">Cesta</span></td>
+        <td class="preco-valor">R$ 6,00</td>
+        <td><button class="btn-detalhes" onclick="mostrarDetalhes('cesta_chocolate')">+ Detalhes</button></td>
+    </tr>
+    <tr>
+        <td><span class="produto-icon">🌱</span> Fertilizante Flores</td>
+        <td><span class="categoria-tag fertilizantes">Cuidado</span></td>
+        <td class="preco-valor">R$ 20,00</td>
+        <td><button class="btn-detalhes" onclick="mostrarDetalhes('fertilizante')">+ Detalhes</button></td>
+    </tr>
+</tbody>
                 </table>
             </div>
             
@@ -1820,6 +1970,138 @@
                     </div>
                 </div>
 
+                <div class="produto" data-categoria="condolencias">
+    <div class="produto-imagem">⚘</div>
+    <div class="produto-info">
+        <h4>Lírios Brancos da Paz</h4>
+        <p>Arranjo solene de lírios brancos, símbolo de pureza e paz eterna</p>
+        <div class="produto-preco">
+            R$ 65,00
+            <button class="btn-produto">Encomendar</button>
+        </div>
+    </div>
+</div>
+
+<div class="produto" data-categoria="condolencias">
+    <div class="produto-imagem">🕯️</div>
+    <div class="produto-info">
+        <h4>Vela Memorial em Vidro</h4>
+        <p>Vela branca em recipiente de vidro com mensagem de conforto</p>
+        <div class="produto-preco">
+            R$ 32,00
+            <button class="btn-produto">Encomendar</button>
+        </div>
+    </div>
+</div>
+
+<div class="produto" data-categoria="condolencias">
+    <div class="produto-imagem">🌿</div>
+    <div class="produto-info">
+        <h4>Planta da Memória</h4>
+        <p>Hera em vaso de cerâmica branca - símbolo de eternidade</p>
+        <div class="produto-preco">
+            R$ 45,00
+            <button class="btn-produto">Encomendar</button>
+        </div>
+    </div>
+</div>
+
+<div class="produto" data-categoria="condolencias">
+    <div class="produto-imagem">✝️</div>
+    <div class="produto-info">
+        <h4>Jardim Memorial</h4>
+        <p>Mini jardim de suculentas brancas em vaso cerâmico neutro</p>
+        <div class="produto-preco">
+            R$ 35,00
+            <button class="btn-produto">Encomendar</button>
+        </div>
+    </div>
+</div>
+
+<div class="produto" data-categoria="condolencias">
+    <div class="produto-imagem">🤍</div>
+    <div class="produto-info">
+        <h4>Orquídea Branca Memorial</h4>
+        <p>Em vaso discreto com tag de mensagem personalizável</p>
+        <div class="produto-preco">
+            R$ 58,00
+            <button class="btn-produto">Encomendar</button>
+        </div>
+    </div>
+</div>
+
+<div class="produto" data-categoria="condolencias">
+    <div class="produto-imagem">📜</div>
+    <div class="produto-info">
+        <h4>Certificado de Saudade</h4>
+        <p>Pergaminho artesanal com mensagem de homenagem</p>
+        <div class="produto-preco">
+            R$ 22,00
+            <button class="btn-produto">Encomendar</button>
+        </div>
+    </div>
+</div>
+        <div class="produto" data-categoria="casamento">
+    <div class="produto-imagem">💒</div>
+    <div class="produto-info">
+        <h4>Arco Floral Nupcial</h4>
+        <p>Estrutura circular com rosas, peônias e eucalipto prateado</p>
+        <div class="produto-preco">
+            R$ 890,00
+            <button class="btn-produto">Encomendar</button>
+        </div>
+    </div>
+</div>
+
+<div class="produto" data-categoria="casamento">
+    <div class="produto-imagem">👰</div>
+    <div class="produto-info">
+        <h4>Buquê Noiva Premium</h4>
+        <p>Peônias brancas, rosas gardenia e folhagem prateada</p>
+        <div class="produto-preco">
+            R$ 320,00
+            <button class="btn-produto">Encomendar</button>
+        </div>
+    </div>
+</div>
+
+<!-- DECORAÇÃO DE MESA -->
+<div class="produto" data-categoria="casamento">
+    <div class="produto-imagem">🏵️</div>
+    <div class="produto-info">
+        <h4>Centro de Mesa Clássico</h4>
+        <p>Rosas brancas e verdes em base de vidro transparente</p>
+        <div class="produto-preco">
+            R$ 150,00
+            <button class="btn-produto">Encomendar</button>
+        </div>
+    </div>
+</div>
+
+<div class="produto" data-categoria="casamento">
+    <div class="produto-imagem">✨</div>
+    <div class="produto-info">
+        <h4>Garland Floral para Mesa Doce</h4>
+        <p>Mini rosas e gypsophila com luzes de led incorporadas</p>
+        <div class="produto-preco">
+            R$ 210,00
+            <button class="btn-produto">Encomendar</button>
+        </div>
+    </div>
+</div>
+
+<!-- DETALHES ROMÂNTICOS -->
+<div class="produto" data-categoria="casamento">
+    <div class="produto-imagem">💝</div>
+    <div class="produto-info">
+        <h4>Lembrancinhas Botânicas</h4>
+        <p>Suculentas em mini vasos com tag personalizado</p>
+        <div class="produto-preco">
+            R$ 28,00 (un.)
+            <button class="btn-produto">Encomendar</button>
+        </div>
+    </div>
+</div>
                 <div class="produto" data-categoria="celebracao">
                     <div class="produto-imagem">🌻</div>
                     <div class="produto-info">
@@ -2079,74 +2361,70 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contato">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-secao">
-                    <h4>Oasis Floral</h4>
-                    <p>Seu refúgio de beleza e tranquilidade no coração da cidade. Criamos momentos mágicos através da arte floral.</p>
-                    <div class="redes-sociais">
-                        <a href="#" class="rede-social" title="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="rede-social" title="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="rede-social" title="Pinterest">
-                            <i class="fab fa-pinterest-p"></i>
-                        </a>
-                        <a href="#" class="rede-social" title="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="#" class="rede-social" title="TikTok">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-secao">
-                    <h4>Contato</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
-                        <li><i class="fas fa-envelope"></i> contato@oasisfloral.com.br</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Rua dos Sonhos, 456 - Jardim Encantado</li>
-                        <li><i class="fas fa-clock"></i> Seg-Sex: 8h-18h | Sáb: 8h-16h</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-secao">
-                    <h4>Serviços</h4>
-                    <ul>
-                        <li><a href="#">Arranjos Personalizados</a></li>
-                        <li><a href="#">Decoração de Eventos</a></li>
-                        <li><a href="#">Buquês de Noiva</a></li>
-                        <li><a href="#">Flores Preservadas</a></li>
-                        <li><a href="#">Entrega Express</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-secao">
-                    <h4>Newsletter</h4>
-                    <p>Receba dicas de cuidados florais e ofertas exclusivas em seu email.</p>
-                    <div style="margin-top: 1rem;">
-                        <input type="email" placeholder="Seu melhor email" style="padding: 0.8rem; border-radius: 25px; border: none; width: 100%; margin-bottom: 1rem;">
-                        <button class="btn-principal" style="width: 100%; padding: 0.8rem;">Inscrever-se</button>
-                    </div>
+  <footer id="contato">
+    <div class="container">
+        <div class="footer-content">
+            <!-- Coluna 1: Sobre -->
+            <div class="footer-secao">
+                <h4>Oasis Floral</h4>
+                <p>Onde as flores desbrotam. Viva momentos mágicos no mundo natural.</p>
+                <div class="redes-sociais">
+                    <a href="https://instagram.com/oasisflorais" class="rede-social" title="Instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/naotemhaha" class="rede-social" title="Facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/qr/VGRFBYSZ43J6O1" class="rede-social" title="WhatsApp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Oasis Floral. Todos os direitos reservados.</p>
-                <div class="assinatura-elegante">
-                    Com amor, Oásis Floral 💕
-                </div>
-                <p style="margin-top: 1rem; font-style: italic; color: var(--rosa-po);">
-                    "Um refúgio de beleza e emoções em meio ao caos" ✨
-                </p>
+
+            <!-- Coluna 2: Contato -->
+            <div class="footer-secao">
+                <h4>Contato</h4>
+                <ul class="contato-lista">
+                    <li><i class="fas fa-phone"></i> <a href="tel:+5541920046318">(41) 92004-6318</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:contatooasisfloral@gmail.com">contatooasisfloral@gmail.com</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Rua dos Sonhos, 456 - Jardim Encantado</li>
+                    <li><i class="fas fa-clock"></i> Seg-Sex: 8h-18h | Sáb: 8h-16h</li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3: Serviços -->
+            <div class="footer-secao">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="#">Arranjos Personalizados</a></li>
+                    <li><a href="#">Decoração de Eventos</a></li>
+                    <li><a href="#">Buquês de Noiva</a></li>
+                    <li><a href="#">Flores Preservadas</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 4: Newsletter -->
+            <div class="footer-secao">
+                <h4>Newsletter</h4>
+                <p>Receba dicas de cuidados florais e ofertas exclusivas.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor email" required>
+                    <button type="submit">Inscrever-se</button>
+                </form>
             </div>
         </div>
-    </footer>
 
+        <!-- Rodapé Inferior -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Oasis Floral. Todos os direitos reservados.</p>
+            <div class="assinatura-elegante">
+                Com amor, Oasis Floral <span>💕</span>
+            </div>
+            <p class="slogan">"Onde as flores desbrotam"</p>
+        </div>
+    </div>
+</footer>
+    
     <!-- Modal de Detalhes -->
     <div class="modal-detalhes" id="modalDetalhes">
         <div class="modal-content">
@@ -2282,39 +2560,72 @@
             }, 2000);
         });
 
+        document.querySelectorAll('.btn-comprar').forEach(button => {
+    button.addEventListener('click', () => {
+        alert("Você selecionou um combo! Em breve, mais opções de personalização.");
+    
+    });
+}); 
+
+
         // Sistema de Modal para Detalhes dos Produtos
-        const produtosDetalhes = {
-            girassois: {
-                icon: '🌻',
-                title: 'Buquê de Girassóis',
-                description: 'Celebre a luz do sol em forma de flores! Nossos girassóis frescos trazem alegria e energia positiva para qualquer ambiente. Perfeitos para presentear alguém especial ou alegrar seu próprio dia.'
-            },
-            coelho: {
-                icon: '🐰',
-                title: 'Coelho de Pelúcia',
-                description: 'Fofura em forma de abraço! Este coelhinho de pelúcia super macio é perfeito para demonstrar carinho. Com detalhes delicados e olhinhos brilhantes, ele conquista corações de todas as idades.'
-            },
-            coracao: {
-                icon: '💖',
-                title: 'Coração de Pelúcia',
-                description: 'Amor em formato de coração! Esta pelúcia romântica é ideal para declarações especiais. Macio, fofo e cheio de significado - o presente perfeito para quem você ama.'
-            },
-            delirios: {
-                icon: '🌸',
-                title: 'Buquê Delírios',
-                description: 'Um delírio de beleza e fragrância! Mix especial de flores em tons pastéis que despertam os sentidos. Cada flor foi escolhida para criar uma sinfonia de cores e aromas.'
-            },
-            rosas: {
-                icon: '🌹',
-                title: 'Buquê de Rosas',
-                description: 'Clássico eterno do amor! Nossas rosas frescas são símbolos universais de paixão e romance. Arranjo tradicional que nunca sai de moda e sempre emociona.'
-            },
-            crisantemo: {
-                icon: '🌼',
-                title: 'Crisântemo Rosa',
-                description: 'Delicadeza em flor! O crisântemo rosa representa amor sincero e pureza. Flor elegante e duradoura, perfeita para decorar ou presentear com sutileza e bom gosto.'
-            }
-        };
+       const produtosDetalhes = {
+    girassois: {
+        icon: '🌻',
+        title: 'Buquê de Girassóis',
+        description: 'Celebre a luz do sol em forma de flores! Nossos girassóis frescos trazem alegria e energia positiva para qualquer ambiente. Perfeitos para presentear alguém especial ou alegrar seu próprio dia.'
+    },
+    coelho: {
+        icon: '🐰',
+        title: 'Coelho de Pelúcia',
+        description: 'Fofura em forma de abraço! Este coelhinho de pelúcia super macio é perfeito para demonstrar carinho. Com detalhes delicados e olhinhos brilhantes, ele conquista corações de todas as idades.'
+    },
+    coracao: {
+        icon: '💖',
+        title: 'Coração de Pelúcia',
+        description: 'Amor em formato de coração! Esta pelúcia romântica é ideal para declarações especiais. Macio, fofo e cheio de significado - o presente perfeito para quem você ama.'
+    },
+    delirios: {
+        icon: '🌸',
+        title: 'Buquê De lírios',
+        description: 'Um delírio de beleza e fragrância! Buquê de lindos lírios que despertam os sentidos.'
+    },
+    rosas: {
+        icon: '🌹',
+        title: 'Buquê de Rosas',
+        description: 'Clássico eterno do amor! Nossas rosas frescas são símbolos universais de paixão e romance. Arranjo tradicional que nunca sai de moda e sempre emociona.'
+    },
+    crisantemo: {
+        icon: '🌼',
+        title: 'Crisântemo Rosa',
+        description: 'Delicadeza em flor! O crisântemo rosa representa amor sincero e pureza. Flor elegante e duradoura, perfeita para decorar ou presentear com sutileza e bom gosto.'
+    },
+    cesta_coracao: {
+        icon: '💜',
+        title: 'Cesta Coração',
+        description: 'Cesta em formato de coração com 8 bombons recheados com licor de cereja, pelúcia e flores secas. Perfeita para aniversários e declarações de amor. Inclui cartão personalizado grátis!'
+    },
+    cesta_romantica: {
+        icon: '❤️',
+        title: 'Cesta Romântica',
+        description: 'Kit completo para um jantar especial: vinho tinto, taças, velas aromáticas e trufas belga. Acompanhada de uma pelucia para o presenteado.'
+    },
+    cesta_amor: {
+        icon: '💘',
+        title: 'Cesta do Amor',
+        description: 'Seleção de mimos para casais: morangos cristalizados, champanhe, pétalas de rosas e uma linda foto personalizável.'
+    },
+    cesta_chocolate: {
+        icon: '🤎',
+        title: 'Cesta de Chocolate',
+        description: 'Para os chocólatras! Contém 15 variedades de chocolates artesanais, incluindo trufas, barras e bombons recheados.'
+    },
+    fertilizante: {
+        icon: '🌱',
+        title: 'Fertilizante para Flores',
+        description: 'Fórmula orgânica com nutrientes essenciais para plantas floríferas. Rendimento: até 3 meses (500g). Aplicação fácil!'
+    }
+};
 
         function mostrarDetalhes(produto) {
             const modal = document.getElementById('modalDetalhes');
